@@ -1,0 +1,6 @@
+framework module LaunchApplication {
+  umbrella header "LaunchApplication-umbrella.h"
+
+  export *
+  module * { export * }
+}
