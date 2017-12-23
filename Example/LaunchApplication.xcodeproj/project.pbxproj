@@ -15,6 +15,7 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		834758D66C9B486CC8C3AE44 /* Pods_LaunchApplication_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFBD7AEF5751BC06313AD807 /* Pods_LaunchApplication_Example.framework */; };
 		A5CE21DB920AC9650CFAF9FB /* Pods_LaunchApplication_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40D3A70F5994E3B13DD4129D /* Pods_LaunchApplication_Tests.framework */; };
+		FCE159C11FEEECD3000BC76A /* AppSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE159C01FEEECD3000BC76A /* AppSequence.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,13 +41,14 @@
 		607FACE51AFB9204008FA782 /* LaunchApplication_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LaunchApplication_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		6205009CFA093BB235447F32 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		6205009CFA093BB235447F32 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		62A8AA70DB9CB2D796BBB4B0 /* Pods-LaunchApplication_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaunchApplication_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LaunchApplication_Tests/Pods-LaunchApplication_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		6CB9997BBFE656A6793C4E58 /* LaunchApplication.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = LaunchApplication.podspec; path = ../LaunchApplication.podspec; sourceTree = "<group>"; };
-		8E2B09DB1E92DDE0AA588A8C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		6CB9997BBFE656A6793C4E58 /* LaunchApplication.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LaunchApplication.podspec; path = ../LaunchApplication.podspec; sourceTree = "<group>"; };
+		8E2B09DB1E92DDE0AA588A8C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		B7CCD0A2780B07351596B038 /* Pods-LaunchApplication_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaunchApplication_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LaunchApplication_Tests/Pods-LaunchApplication_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		BFBD7AEF5751BC06313AD807 /* Pods_LaunchApplication_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LaunchApplication_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E949B5A8CE80989848B49909 /* Pods-LaunchApplication_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaunchApplication_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LaunchApplication_Example/Pods-LaunchApplication_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		FCE159C01FEEECD3000BC76A /* AppSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSequence.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				FCE159C01FEEECD3000BC76A /* AppSequence.swift */,
 			);
 			name = "Example for LaunchApplication";
 			path = LaunchApplication;
@@ -373,6 +376,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCE159C11FEEECD3000BC76A /* AppSequence.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
@@ -558,7 +562,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
@@ -575,7 +579,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
