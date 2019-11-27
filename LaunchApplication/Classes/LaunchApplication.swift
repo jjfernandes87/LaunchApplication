@@ -21,7 +21,7 @@ open class LaunchApplication: NSObject {
         preloadLaunchAndRelaunchSequence()
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(enterForeground),
-                                               name: NSNotification.Name.UIApplicationWillEnterForeground,
+                                               name: UIApplication.willEnterForegroundNotification,
                                                object: UIApplication.shared)
     }
     
@@ -49,8 +49,7 @@ open class LaunchApplication: NSObject {
     
     /// Passa entre um passo e outro da inicialização
     public func nextLaunchStage() {
-        var targetSequence = comingFromBackground ? relaunchSequence : launchSequence
-        
+        let targetSequence = comingFromBackground ? relaunchSequence : launchSequence
         if targetSequence.count > launchSequenceStage {
             let nextStage = targetSequence[launchSequenceStage].replacingOccurrences(of: "LaunchStage_", with: "")
             let stageSelector = NSSelectorFromString(nextStage)

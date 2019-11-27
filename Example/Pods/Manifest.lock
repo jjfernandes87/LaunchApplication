@@ -1,16 +1,16 @@
 PODS:
-  - LaunchApplication (0.1.0)
+  - LaunchApplication (0.0.3)
 
 DEPENDENCIES:
   - LaunchApplication (from `../`)
 
 EXTERNAL SOURCES:
   LaunchApplication:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  LaunchApplication: a144e800ff4b0d2a43557c3e6e9da8581442c1e9
+  LaunchApplication: 78ea3e024d1a2a6e332d746d7e1f0da1070a6a34
 
-PODFILE CHECKSUM: bf36285a377f42c0080d2912f1a08f6f627ce9f9
+PODFILE CHECKSUM: 190cb3243cc0b175ba2e19c971e1d06e2083ca5f
 
-COCOAPODS: 1.3.0
+COCOAPODS: 1.8.3

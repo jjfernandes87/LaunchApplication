@@ -1,0 +1,47 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/juliofernandes/Documents/Cocoapods/LaunchApplication/LaunchApplication/Classes/LaunchApplication.swift",
+      "line": 3,
+      "symbol": "LaunchApplication",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juliofernandes/Documents/Cocoapods/LaunchApplication/LaunchApplication/Classes/LaunchApplication.swift",
+      "line": 12,
+      "symbol": "LaunchApplication.relaunchSequence",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juliofernandes/Documents/Cocoapods/LaunchApplication/LaunchApplication/Classes/LaunchApplication.swift",
+      "line": 13,
+      "symbol": "LaunchApplication.launchWithError",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juliofernandes/Documents/Cocoapods/LaunchApplication/LaunchApplication/Classes/LaunchApplication.swift",
+      "line": 19,
+      "symbol": "LaunchApplication.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juliofernandes/Documents/Cocoapods/LaunchApplication/LaunchApplication/Classes/LaunchApplication.swift",
+      "line": 92,
+      "symbol": "LaunchApplicationProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/juliofernandes/Documents/Cocoapods/LaunchApplication/LaunchApplication/Classes/LaunchApplication.swift",
+      "line": 93,
+      "symbol": "LaunchApplicationProtocol.didFinishLaunchSequence(application:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/juliofernandes/Documents/Cocoapods/LaunchApplication"
+}

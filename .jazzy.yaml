@@ -1,0 +1,8 @@
+author: Julio Fernandes Junior
+author_url: https://github.com/jjfernandes87
+github_url: https://github.com/jjfernandes87/LaunchApplication.git
+root_url: https://github.com/jjfernandes87/LaunchApplication.git
+module: LaunchApplication
+output: docs
+theme: fullwidth
+xcodebuild_arguments: [-workspace, './Example/LaunchApplication.xcworkspace', -scheme, 'LaunchApplication']

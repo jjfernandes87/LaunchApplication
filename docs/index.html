@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>LaunchApplication  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+
+    <a title="LaunchApplication  Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          LaunchApplication Docs
+        </a>
+         (45% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/jjfernandes87/LaunchApplication.git">
+            <img class="header-icon" src="img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fgithub%2Ecom%2Fjjfernandes87%2Fdocsets%2FLaunchApplication%2Exml">
+            <img class="header-icon" src="img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">LaunchApplication Reference</a>
+      <img class="carat" src="img/carat.png" />
+      LaunchApplication  Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/LaunchApplication.html">LaunchApplication</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/LaunchApplicationProtocol.html">LaunchApplicationProtocol</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            
+            <h1 id='launchapplication' class='heading'>LaunchApplication</h1>
+
+<p>LaunchApplication é uma biblioteca para você criar um sequencia de inicailização de forma simples e rápida.</p>
+
+<p><a href="https://travis-ci.org/jjfernandes87/LaunchApplication"><img src="http://img.shields.io/travis/jjfernandes87/LaunchApplication.svg?style=flat" alt="CI Status"></a>
+<a href="http://cocoapods.org/pods/LaunchApplication"><img src="https://img.shields.io/cocoapods/v/LaunchApplication.svg?style=flat" alt="Version"></a>
+<a href="http://cocoapods.org/pods/LaunchApplication"><img src="https://img.shields.io/cocoapods/l/LaunchApplication.svg?style=flat" alt="License"></a>
+<a href="http://cocoapods.org/pods/LaunchApplication"><img src="https://img.shields.io/cocoapods/p/LaunchApplication.svg?style=flat" alt="Platform"></a></p>
+<h2 id='features' class='heading'>Features</h2>
+
+<ul>
+<li>[x] Cria uma lista de etapas para serem executas de forma sincrona</li>
+<li>[x] Cria uma lista <q>LaunchSequence</q></li>
+<li>[x] Cria uma lista <q>RelaunchSequence</q></li>
+<li>[x] Tenha o controle sobre os erros</li>
+</ul>
+<h2 id='requirements' class='heading'>Requirements</h2>
+
+<ul>
+<li>iOS 9.3+</li>
+<li>Xcode 9.0+</li>
+<li>Swift 4.0+</li>
+</ul>
+<h2 id='communication' class='heading'>Communication</h2>
+
+<ul>
+<li>Se você <strong>encontrou um bug</strong>, abra uma issue.</li>
+<li>Se você <strong>tem uma nova feature</strong>, abra uma issue.</li>
+<li>Se você <strong>quer contribuir</strong>, envie uma pull request.</li>
+</ul>
+<h2 id='example' class='heading'>Example</h2>
+
+<p>Para rodar o projeto de exemplo, clone o repositório, e rode o comando <code>pod install</code> no diretório Example primeiro.</p>
+<h2 id='installation' class='heading'>Installation</h2>
+
+<p>LaunchApplication esta disponível através <a href="http://cocoapods.org">CocoaPods</a>. Para instalar, basta adicionar a linha abaixo no seu Podfile:</p>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'LaunchApplication'</span><span class="p">,</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s1">'https://github.com/jjfernandes87/LaunchApplication.git'</span>
+</code></pre>
+
+<p>Crie uma classe e extenda da LaunchApplication</p>
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">AppSequence</span><span class="p">:</span> <span class="kt">LaunchApplication</span> <span class="p">{</span>
+    <span class="o">...</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Impemente o metodo launchAndRelaunchSequence, responsável por carregar a lista de launchSequence e relaunchSequence.
+Obs: No swift 4 é necessário informar @objc na frente do método.</p>
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">AppSequence</span><span class="p">:</span> <span class="kt">LaunchApplication</span> <span class="p">{</span>
+    <span class="c1">/// Metodo responsável por carregar a lista de launch e relaunch</span>
+    <span class="kd">@objc</span> <span class="kd">func</span> <span class="nf">launchAndRelaunchSequence</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">launchSequence</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="s">"LaunchStage_bootOne"</span><span class="p">)</span>
+        <span class="n">launchSequence</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="s">"LaunchStage_bootTwo"</span><span class="p">)</span>
+        <span class="n">relaunchSequence</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="s">"LaunchStage_bootOne"</span><span class="p">)</span>
+        <span class="n">relaunchSequence</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="s">"LaunchStage_bootTwo"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Impemente os métodos que foram adicionar na lista de launchSequence e relaunchSequence.
+Obs: No swift 4 é necessário informar @objc na frente do método.</p>
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">AppSequence</span><span class="p">:</span> <span class="kt">LaunchApplication</span> <span class="p">{</span>
+    <span class="c1">/// Metodo responsável por carregar a lista de launch e relaunch</span>
+    <span class="kd">@objc</span> <span class="kd">func</span> <span class="nf">launchAndRelaunchSequence</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">launchSequence</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="s">"LaunchStage_bootOne"</span><span class="p">)</span>
+        <span class="n">launchSequence</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="s">"LaunchStage_bootTwo"</span><span class="p">)</span>
+        <span class="n">relaunchSequence</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="s">"LaunchStage_bootOne"</span><span class="p">)</span>
+        <span class="n">relaunchSequence</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="s">"LaunchStage_bootTwo"</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="c1">/// Metodo 1 para ser executado</span>
+    <span class="kd">@objc</span> <span class="kd">func</span> <span class="nf">bootOne</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"bootOne"</span><span class="p">)</span>
+        <span class="nf">nextLaunchStage</span><span class="p">()</span>
+    <span class="p">}</span>
+
+    <span class="c1">/// Metodo 2 para ser executado</span>
+    <span class="kd">@objc</span> <span class="kd">func</span> <span class="nf">bootTwo</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"bootTwo"</span><span class="p">)</span>
+        <span class="nf">nextLaunchStage</span><span class="p">()</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Agora que todos os métodos foram implementados, precisam chamar nossa classe no app delegate para que o processo de inicialização seja feito.
+Obs: Ao chamar o método launchWithDelegate(delegate: LaunchApplicationProtocol), lembre-se de implementar seu delegate.</p>
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">AppDelegate</span><span class="p">:</span> <span class="kt">UIResponder</span><span class="p">,</span> <span class="kt">UIApplicationDelegate</span><span class="p">,</span> <span class="kt">LaunchApplicationProtocol</span> <span class="p">{</span>
+
+    <span class="o">...</span>
+    <span class="k">var</span> <span class="nv">launchSequence</span> <span class="o">=</span> <span class="kt">AppSequence</span><span class="p">()</span>
+
+    <span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="n">didFinishLaunchingWithOptions</span> <span class="nv">launchOptions</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIApplicationLaunchOptionsKey</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="p">{</span>
+
+        <span class="n">launchSequence</span><span class="o">.</span><span class="nf">launchWithDelegate</span><span class="p">(</span><span class="nv">delegate</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span>
+        <span class="o">...</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">didFinishLaunchSequence</span><span class="p">(</span><span class="nv">application</span><span class="p">:</span> <span class="kt">LaunchApplication</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"Sucesso"</span><span class="p">)</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre>
+<h2 id='author' class='heading'>Author</h2>
+
+<p>jjfernandes87, <a href="mailto:julio.fernandes87@gmail.com">julio.fernandes87@gmail.com</a></p>
+<h2 id='license' class='heading'>License</h2>
+
+<p>LaunchApplication is available under the MIT license. See the LICENSE file for more info.</p>
+
+          </div>
+        </section>
+
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2019 <a class="link" href="https://github.com/jjfernandes87" target="_blank" rel="external">Julio Fernandes Junior</a>. All rights reserved. (Last updated: 2019-11-27)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

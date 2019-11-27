@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, LaunchApplicationProtocol
     var window: UIWindow?
     var launchSequence = AppSequence()
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         launchSequence.launchWithDelegate(delegate: self)
         
