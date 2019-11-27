@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name             = 'LaunchApplication'
-s.version          = '0.0.3'
+s.version          = '1.0.0'
 s.license          = { :type => 'MIT', :file => 'LICENSE' }
 s.summary          = 'Crie um sequencia de inicailização de forma simples e rápida.'
 s.homepage         = 'https://github.com/jjfernandes87/LaunchApplication'
